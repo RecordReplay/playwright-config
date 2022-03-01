@@ -43,6 +43,9 @@ function getDeviceConfig(browserName: BrowserName) {
   return {
     launchOptions: {
       executablePath,
+      env: {
+        RECORD_ALL_CONTENT: 1
+      },
     },
     defaultBrowserType: browserName,
   };
