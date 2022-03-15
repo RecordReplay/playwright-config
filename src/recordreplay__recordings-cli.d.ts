@@ -1,3 +1,9 @@
+import '@recordreplay/recordings-cli';
+
+declare module '@recordreplay/recordings-cli/src/utils' {
+  export function getDirectory(): string;
+}
+
 declare module '@recordreplay/recordings-cli' {
   /**
    * Supported replay browsers
