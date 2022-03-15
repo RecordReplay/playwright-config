@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "node -e 'require(\"fs\").existsSync(\"./index.js\") || (console.error(\"\\x1b[31mError:\\x1b[37m Wrong Directory. Publish from the dist/ directory instead\\n\"),process.exit(1))'",
-      "install": "node -e 'process.exit(require(\"fs\").existsSync(\"./install.js\") ? 1 : 0)' || node ./install.js",
-      "build": "rm -rf dist/ && tsc && cp package.json README.md dist/",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "node -e 'process.exit(require(\"fs\").existsSync(\"./install.js\") ? 1 : 0)' || node ./install.js",
+    "build": "rm -rf dist/ && tsc && cp package.json README.md dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "@playwright/test": "^1.20.0",
     "@types/node": "^17.0.21"
   },
   "dependencies": {
